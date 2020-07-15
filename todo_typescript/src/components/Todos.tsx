@@ -1,5 +1,6 @@
 import React from "react";
-import { TodoItemProps } from "../interfaces";
+import { TodoItemProps } from "../interfaces/TodoItemProps";
+import { WeekProps} from "../interfaces/TodosProps";
 
 const TodoItem = ({ todo, onToggle, onRemove }: TodoItemProps) => {
   return (
@@ -17,3 +18,4 @@ const TodoItem = ({ todo, onToggle, onRemove }: TodoItemProps) => {
     </div>
   );
 };
+
