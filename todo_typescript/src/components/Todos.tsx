@@ -1,6 +1,19 @@
 import React from "react";
-import { TodoItemProps } from "../interfaces/TodoItemProps";
-import { WeekProps} from "../interfaces/TodosProps";
+
+interface TodoProps {
+  id: number;
+  text: string;
+  done: boolean;
+}
+interface TodoItemProps {
+  todo: TodoProps;
+  onToggle: (id: number) => void;
+  onRemove: (id: number) => void;
+}
+
+interface WeekProps {
+  week: string;
+}
 
 const TodoItem = ({ todo, onToggle, onRemove }: TodoItemProps) => {
   return (
@@ -18,4 +31,3 @@ const TodoItem = ({ todo, onToggle, onRemove }: TodoItemProps) => {
     </div>
   );
 };
-
